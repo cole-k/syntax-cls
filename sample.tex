@@ -1,0 +1,60 @@
+\documentclass{syntax}
+
+\title{Paper title}
+\date{February 15, 2019}
+% Use your id for this
+\author{12345678}
+
+\begin{document}
+
+\maketitle
+% remove page style for first page
+\thispagestyle{empty}
+
+\begin{abstract}
+  Hello.
+\end{abstract}
+
+\section{Introduction} \label{sec:intro}
+Hi. This is a citation \citep{wallace}. This is another kind of citation
+\cite{wallace}. Use the first, probably.
+
+\section{Synonyms for ``Hello''}
+Hello. Hi (see section \fref{sec:intro}). Hey. Yo.
+
+\subsection{Debated synonyms} \label{sec:debated}
+This is \fref{sec:debated}. It is also \Fref{sec:debated}. 
+
+All\^{o}. A-hoy-hoy. Moshi moshi.
+
+\begin{exe}
+  \ex
+    \begin{forest} 
+      [Root
+        [Left child]
+        [Right child
+          [Right child', roof]
+        ]
+      ]
+    \end{forest} \label{tree:sample}
+\end{exe}
+
+\Fref{tree:sample} is an example.
+
+\newpage
+
+\section{Known antonyms}
+Bye. Good bye. Bye-bye. See some more examples below of how to not say
+``hello'':
+
+\begin{exe}
+  \ex[*]{Good morning.} \label{ex:not-antonym}
+  \ex{Farewell.} \label{ex:antonym}
+\end{exe}
+
+Refer to \fref{ex:not-antonym} for something that isn't an antonym. 
+And refer to \fref[vario]{tree:sample} for an unrelated reason.
+
+\bibliography{sample}
+
+\end{document}
