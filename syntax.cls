@@ -23,6 +23,9 @@
 \useforestlibrary{linguistics}
 \forestapplylibrarydefaults{linguistics}
 
+%% IPA
+\RequirePackage{tipa}
+
 %% numbered examples and sub/superscripts outside math mode
 %% this apparently can screw with other packages, so load last
 \RequirePackage{gb4e}
