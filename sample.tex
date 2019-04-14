@@ -20,23 +20,38 @@ Hi. This is a citation \citep{wallace}. This is another kind of citation
 \cite{wallace}. Use the first, probably.
 
 \section{Synonyms for ``Hello''}
-Hello. Hi (see section \fref{sec:intro}). Hey. Yo.
+Hello. Hi (see \fref{sec:intro}). Hey. Yo.
 
 \subsection{Debated synonyms} \label{sec:debated}
 This is \fref{sec:debated}. It is also \Fref{sec:debated}. 
 
 All\^{o}. A-hoy-hoy. Moshi moshi.
 
-\begin{exe}
+\begin{exe} 
   \ex
-    \begin{forest} 
-      [Root
-        [Left child]
-        [Right child
-          [Right child', roof]
+  \begin{forest}
+      [TP
+        [DP [Kye, roof, name=spectp]]
+        [T'
+          [T \\ $\varnothing$]
+          [\vP
+            [\sout{DP}, name=subj]
+            [\textit{v}'
+              [\textit{v} \\ eats, name=littlev]
+              [VP
+                [\phantom{}]
+                [V'
+                  [\sout{V}, name=v]
+                  [DP [burgers, roof]]
+                ]
+              ]
+            ]
+          ]
         ]
       ]
-    \end{forest} \label{tree:sample}
+    \draw[->] (subj) to[out=south west, in=south] (spectp);
+    \draw[->] (v) to[out=south west, in=south] (littlev);
+  \end{forest} \label{tree:sample}
 \end{exe}
 
 \Fref{tree:sample} is an example.

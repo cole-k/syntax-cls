@@ -15,6 +15,13 @@
 \RequirePackage{hyperref}
 \RequirePackage{lastpage}
 \RequirePackage{titling}
+
+%% strikeout
+\RequirePackage[normalem]{ulem}
+
+%% varnothing
+\RequirePackage{amssymb}
+
 %% times new roman ish
 \RequirePackage{newtxtext}
 
@@ -76,6 +83,9 @@
   urlcolor=blue!50!green,
   linkcolor=black,
 }
+
+%% convenience macros
+\def \vP {\textit{v}P}
 
 %% fancyref settings
 
